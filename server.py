@@ -21,7 +21,7 @@ curRounds = 0
 maxRounds = 100
 
 # Start a new simulation, results of the current simulation will be treated as final
-@app.route('/simulator/new', methods=['POST'])
+@app.route('/simulator/new', methods=['GET', 'POST'])
 def new():
     global simulator
     roundScores.append(simulator.score)
@@ -32,7 +32,7 @@ def new():
 
 roundScores = []
 
-@app.route('/simulator/tick', methods=['POST'])
+@app.route('/simulator/tick', methods=['GET', 'POST'])
 def tick():
     if(len(roundScores) >= maxRounds):
         return ALL_ROUNDS_DONE
@@ -54,7 +54,7 @@ def tick():
 def scores():
     return jsonify(roundScores)
 
-@app.route('/endAllRounds', methods=['POST'])
+@app.route('/endAllRounds', methods=['GET', 'POST'])
 def endAllRounds():
     global maxRounds
     maxRounds = len(roundScores)
