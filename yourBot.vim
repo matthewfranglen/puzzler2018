@@ -3,8 +3,8 @@
 # vim: set syntax=off :
 exec vim -n -u DEFAULTS -i NONE --cmd 'set loadplugins' -c 'normal gg}jy$@"' "${0}"
 
-j0f:w"ay$ j0f:w"ey$ j0f:w"fy$ j0f:w"gy$ j0f:w"hy$ j0f:w"iy$ j0f:w"xy$ @a@x
-@a initialize      : :enew:file state
+jyGGop:.,$ s/\v^\@(.).*/j0f:w"\1y$/{j:.,$ jkddy$dd{j@0@a@x
+@a initialize      : :enew!:file state:setlocal buftype=nofile
 @e load raw state  : :1,$ d:read http://localhost:5000/simulator/state:1 d
 @f clean state     : :s/^\v(.*)\[(.*)\],(.*)$/\2\r\r\3gg:s/},{/}\r{/g:1,/^$/-1 sortgg0fxlllyt,:2,/^$/-1 normal fx"gg0/"y"/llllyt}:2,/^$/-1 normal /"y"/"
 @g sort by distance: :2,/^$/-1 s/\v^.*"x":-?(\d+),"y":-?(\d+)/\1+\2 &:2,/^$/-1 normal 0cW=":2,/^$/-1 sort n
