@@ -7,7 +7,7 @@ jyGGop:.,$ s/\v^\@(.).*/j0f:w"\1y$/{j:.,$ jkddy$dd{j@0@a@x
 @a initialize      : :enew!:file state:setlocal buftype=nofile
 @e get state       : @f@g
 @f load raw state  : :1,$ d:read http://localhost:5000/simulator/state:1 d
-@g clean state     : :s/^\v(.*)\[(.*)\],.*$/\2gg:s/},{/}\r{/g:% sortgg0fxlllyt,:2,$ normal fx"gg0/"y"/llllyt}:2,$ normal /"y"/"
+@g clean state     : :s/^\v(.*)\[(.*)\],.*$/\2gg:s/},{/}\r{/g:% sortgg0fxlllyt,:2,$ normal fx"gg0/"y"/llllyt}:2,$ normal /"y"/":g/"ownerId":[1-9][0-9]*,/ d
 @k choose target   : ggyGO@z:2,$ v/"ownerId":0/ d:1 s/^@z\n.*"ownerId".*\n.*"ownerId".*\n.*"ownerId".*\n.*"ownerId".*\n.*"ownerId".*/@y/egg"0pggdd@"
 @l only bot base   : :v/"bot_base"/ d
 @m sort by distance: :2,$ s/\v^.*"x":-?(\d+),"y":-?(\d+)/\1+\2 &:2,$ normal 0cW=":2,$ sort n
