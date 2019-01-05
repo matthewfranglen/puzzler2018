@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bot implementation in vim
 # vim: set syntax=off :
-exec vim -n -u DEFAULTS --cmd 'set loadplugins' -c 'normal gg}jy$@"' "${0}"
+exec vim -n -u DEFAULTS -i NONE --cmd 'set loadplugins' -c 'normal gg}jy$@"' "${0}"
 
 j0f:l"ay$ j0f:l"by$ j0f:l"cy$ j0f:l"dy$ j0f:l"ey$ j0f:l"fy$ @f
 @a load raw state  : :silent edit http://localhost:5000/simulator/state:0file:file state
