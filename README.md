@@ -27,4 +27,10 @@ To permit this *the server implementation was changed*:
 The macros use unprintable characters that may be corrupted when viewed.
 It would be best to open `yourBot.vim` in vim as it will display the code properly.
 
+## Submission Run
+
+Score: avg=6.554 high=10 low=-4
+Rescued: avg=6.910 high=10 low=0
+Lost: avg=0.356 high=6 low=0
+
 See https://github.com/smmathews-bw-boston/puzzler2018 for original README
