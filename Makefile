@@ -30,11 +30,4 @@ run-base-bot:
 	pipenv run python -m baseBot
 
 run-your-bot:
-	pipenv run python -m yourBot
-	
-install-js-bot:
-	npm install javascript-client
-	npm link javascript-client
-
-run-your-js-bot:
-	node yourBot.js
+	./yourBot.vim
