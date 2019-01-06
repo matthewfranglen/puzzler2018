@@ -8,7 +8,7 @@ jyGGop:.,$ s/\v^\@(.).*/j0f:w"\1y$/{j:.,$ jkddy$dd{j@0@a@x
 @e get state       : @f@g
 @f load raw state  : :1,$ d:read http://localhost:5000/simulator/state:1 d
 @g clean state     : :s/^\v(.*)\[(.*)\],.*$/\2gg:s/},{/}\r{/g:% sortgg0fxlllyt,:2,$ normal fx"gg0/"y"/llllyt}:2,$ normal /"y"/":g/"ownerId":[1-9][0-9]*,/ d
-@k choose target   : ggyGO@y:2,$ v/collectible/ d:2,$ s/.*"ownerId"/"ownerId":2,$ sort n:1 s/^@y\v((.|\n)*"ownerId":null,)@=/@z/e:1 s/^@z\n.*"ownerId":0,.*\n.*"ownerId":0,.*\n.*"ownerId":0,.*\n.*"ownerId":0,.*\n.*"ownerId":0,\v(.|\n)*/@y/e:1 s/\v^(.*)\n(.|\n)*/\1/egg"0pggdd@"
+@k choose target   : ggyGO@y:2,$ v/collectible/ d:2,$ s/.*"ownerId"/"ownerId":2,$ sort n:1 s/^@y\ze\v((.|\n)*"ownerId":null,)/@z/e:1 s/^@z\ze\v((\n|.)*"ownerId":0,){5}/@y/e:1 s/\v^(.*)\n(.|\n)*/\1/egg"0pggdd@"
 @l only bot base   : :v/"bot_base"/ d
 @m sort by distance: :2,$ s/\v^.*"x":-?(\d+),"y":-?(\d+)/\1+\2 &:2,$ normal 0cW=":2,$ sort n
 @n only collectible: :v/"ownerId":null/ d:v/collectible/ d:1 s/\n\v(.|\n)*//e
