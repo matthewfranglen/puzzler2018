@@ -18,4 +18,4 @@ jyGGop:.,$ s/\v^\@(.).*/j0f:w"\1y$/{j:.,$ jkddy$dd{j@0@a@w
 @w loop            : @e@k
 @x move to bot base: @l@r@w
 @y collect         : @m@n@r@w
-@z new round       : ggdG:read http://localhost:5000/simulator/new:1 d
+@z new round       : ggdG:read http://localhost:5000/simulator/new:1 d@w
