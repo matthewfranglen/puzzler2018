@@ -16,6 +16,6 @@ jyGGop:.,$ s/\v^\@(.).*/j0f:w"\1y$/{j:.,$ jkddy$dd{j@0@a@w
 @s entity direction: :s/\v.*\{"x":(-?\d+).*,"y":(-?\d+).*/\1 \2:s/^-.*/left/e:s/^0 -.*/up/e:s/^0 .*/down/e:s/^\d.*/right/e
 @t submit direction: :s/\v^(.+)$/{"entityIdsToAction":[{"id":0,"action":"\1"}]} :s/{/%7B/ge :s/"/%22/ge :s/:/%3A/ge :s/\[/%5B/ge :s/,/%2C/ge :s/}/%7D/ge :s/]/%5D/ge :s/%/\\%/geIhttp://localhost:5000/simulator/tick?json=0y$dd:read 0:1 d
 @w loop            : @e@k
-@x move to bot base: @l@r
-@y collect         : @m@n@r
+@x move to bot base: @l@r@w
+@y collect         : @m@n@r@w
 @z new round       : :1,$ d:read http://localhost:5000/simulator/new:1 d
