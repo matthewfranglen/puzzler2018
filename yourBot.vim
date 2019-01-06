@@ -6,7 +6,7 @@ exec vim -n -u DEFAULTS -i NONE --cmd 'set loadplugins' -c 'normal gg}jy$@"' "${
 jyGGop:.,$ s/\v^\@(.).*/j0f:w"\1y$/{j:.,$ jkddy$dd{j@0@a@w
 @a initialize      : :enew!:file state:setlocal buftype=nofile
 @e get state       : @f@g
-@f load raw state  : :1,$ d:read http://localhost:5000/simulator/state:1 d
+@f load raw state  : ggdG:read http://localhost:5000/simulator/state:1 d
 @g clean state     : :s/^\v(.*)\[(.*)\],.*$/\2gg:s/},{/}\r{/g:% sortgg0fxlllyt,:2,$ normal fx"gg0/"y"/llllyt}:2,$ normal /"y"/":g/"ownerId":[1-9][0-9]*,/ d
 @k choose target   : ggyGO@z:2,$ v/collectible/ d:2,$ s/.*"ownerId"/"ownerId":2,$ sort n:1 s/^@[xyz]\ze\v((.|\n)*"ownerId":null,)/@y/e:1 s/^@[xyz]\ze\v((\n|.)*"ownerId":0,){5}/@x/e:1 s/^@z\ze\v((\n|.)*"ownerId":0,)/@x/e:1 s/\v^(\@[xyz])\n(.|\n)*/\1/egg"0pggdd@"
 @l only bot base   : :v/"bot_base"/ d
@@ -18,4 +18,4 @@ jyGGop:.,$ s/\v^\@(.).*/j0f:w"\1y$/{j:.,$ jkddy$dd{j@0@a@w
 @w loop            : @e@k
 @x move to bot base: @l@r@w
 @y collect         : @m@n@r@w
-@z new round       : :1,$ d:read http://localhost:5000/simulator/new:1 d
+@z new round       : ggdG:read http://localhost:5000/simulator/new:1 d
