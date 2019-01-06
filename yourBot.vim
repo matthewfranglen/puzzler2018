@@ -12,9 +12,10 @@ jyGGop:.,$ s/\v^\@(.).*/j0f:w"\1y$/{j:.,$ jkddy$dd{j@0@a@w
 @l only bot base   : :v/"bot_base"/ d
 @m sort by distance: :2,$ s/\v^.*"x":-?(\d+),"y":-?(\d+)/\1+\2 &:2,$ normal 0cW=":2,$ sort n
 @n only collectible: :v/"ownerId":null/ d:v/collectible/ d:1 s/\n\v(.|\n)*//e
-@r submit seek     : @s@t
-@s entity direction: :s/\v.*\{"x":(-?\d+).*,"y":(-?\d+).*/\1 \2:s/^-.*/left/e:s/^0 -.*/up/e:s/^0 .*/down/e:s/^\d.*/right/e
-@t submit direction: :s/\v^(.+)$/{"entityIdsToAction":[{"id":0,"action":"\1"}]} :s/{/%7B/ge :s/"/%22/ge :s/:/%3A/ge :s/\[/%5B/ge :s/,/%2C/ge :s/}/%7D/ge :s/]/%5D/ge :s/%/\\%/geIhttp://localhost:5000/simulator/tick?json=0y$dd:read 0:1 d
+@r submit seek     : @s@u
+@s prefer x        : O@t@u0"ry$dd:s/\v.*\{"x":(-?\d+).*,"y":(-?\d+).*/\1 \2:s/^-.*/left/e:s/^[1-9].*/right/e:s/^0 -.*/up/e:s/^0 .*/down/e
+@t prefer y        : O@s@u0"ry$dd:s/\v.*\{"x":(-?\d+).*,"y":(-?\d+).*/\1 \2:s/\v^-?\d+ -.*/up/e:s/\v^-?\d+ [1-9].*/down/e:s/^-.*/left/e:s/^[1-9].*/right/e
+@u submit direction: :s/\v^(.+)$/{"entityIdsToAction":[{"id":0,"action":"\1"}]} :s/{/%7B/ge :s/"/%22/ge :s/:/%3A/ge :s/\[/%5B/ge :s/,/%2C/ge :s/}/%7D/ge :s/]/%5D/ge :s/%/\\%/geIhttp://localhost:5000/simulator/tick?json=0y$dd:read 0:1 d
 @w loop            : @e@k
 @x move to bot base: @l@r@w
 @y collect         : @m@n@r@w
